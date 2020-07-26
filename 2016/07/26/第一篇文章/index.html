@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html  lang=zh>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+    
+    <link rel="shortcut icon" href="/images/favicon.ico ">
+    
+    
+    <link rel="icon" type="image/png" href="/images/favicon-android.png " sizes="192x192">
+    
+    
+    <link rel="apple-touch-icon" href="/images/favicon-apple.png " sizes="180x180">
+    
+  
+  <!-- title -->
+  <title>YYZe&#39;blog 小发现 </title>
+  <!-- styles -->
+  <!-- styles -->
+
+<link rel="stylesheet" href="/styles/global.css">
+
+  <!-- rss -->
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+  <body>
+    <header id="header">
+  
+  <nav class="menu menu--right">
+  
+    <a class="menu__item" href="/">主页</a>
+    <a class="menu__item" href="/archives/">归档</a>
+    <a class="menu__item" href="/categories/">专题</a>
+    <a class="menu__item" href="/tags/">标签</a>
+    <!-- <a class="menu__item" href="/">作品</a> -->
+    <!-- <a class="menu__item" href="/about/">关于</a> -->
+  </nav>
+</header>
+    <main>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post__header">
+  <h1 class="post__title">小发现</h1>
+  
+  
+  <div class="post__meta">
+    
+<time class="post__date" datetime="2016-07-26T11:07:01.000Z" itemprop="datePublished">
+  
+  <i class="blogfont">&#xedff;</i>
+  
+  2016-07-26 19:07:01
+</time>
+
+    
+
+    
+<div class="post__tag">
+  <i class="blogfont">&#xe7ec;</i>
+  <a class="tag-link" href="/tags/Python/" rel="tag">Python</a>
+</div>
+
+
+    <div id="/2016/07/26/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="leancloud_visitors post__stat" data-flag-title="小发现">
+  <i class="blogfont">&#xe672;</i>
+  <span class="leancloud-visitors-count">loading...</span>
+</div>
+  </div>
+</header>
+  <aside class="post__aside">
+  <div class="post__actions">
+    <a id="backTop" class="post__top" href="javascript:">
+      <i class="blogfont">&#xe6b1;</i><!-- Top -->
+    </a>
+    <a id="share" class="post__share" href="javascript:">
+      <i class="blogfont">&#xe6c1;</i>
+    </a>
+  </div>
+  
+</aside>
+  <div class="post__content" itemprop="articleBody">
+    <p>二者是有区别的。他们的相同点让我们容易以为二者没有区别。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print([[]]*<span class="number">3</span> == [[],[],[]]) <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
+
+<p>由代码可以看出，二者的值是相等的。但是仅仅是值相等并不代表二者等价。下面两段代码比较出了二者的不同。</p>
+<p>代码1：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lists1 = [[],[],[]]</span><br><span class="line">print(lists1)        <span class="comment"># [[],[],[]]</span></span><br><span class="line">lists1[<span class="number">0</span>].append(<span class="number">3</span>)</span><br><span class="line">print(lists1)        <span class="comment"># [[3],[],[]]</span></span><br></pre></td></tr></table></figure>
+
+<p>代码2</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lists2 = [[]]*<span class="number">3</span></span><br><span class="line">print(lists2)        <span class="comment"># [[],[],[]]</span></span><br><span class="line">lists2[<span class="number">0</span>].append(<span class="number">3</span>)</span><br><span class="line">print(lists2)        <span class="comment"># [[3],[3],[3]]</span></span><br></pre></td></tr></table></figure>
+
+<p>二者的不同的原因在于：</p>
+<blockquote>
+<p><code>[[]]</code> 是一个包含了一个空列表的单元素列表，所以 <code>[[]] * 3</code> 结果中的三个元素都是对这一个空列表的引用。 修改 <code>lists</code> 中的任何一个元素实际上都是对这一个空列表的修改。</p>
+</blockquote>
+<p>也就是说：<code>[[]]* 3</code>结果中的三个元素都引用同一个内存地址，这个内存地址上的值（value)变了，大家跟着都变。而<code>[[],[],[]]</code>中的每个元素各自引用一个内存地址，其中一个值给变并不影响另外两个。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print([[]]*<span class="number">3</span> <span class="keyword">is</span> [[],[],[]]) <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
+
+<p>提示：<code>is</code>是比较对象的id,而<code>==</code>比较对象的值</p>
+
+  </div>
+  
+</article>
+    </main>
+    <footer id="footer">
+  Copyright &copy;
+  2020
+  yangyongze
+  
+  
+    <a class="social-links" href="https://github.com/jylzs369" target="_blank" rel="noopener"><i class="blogfont">&#xe6b7; </i></a>
+  
+    <a class="social-links" href="mailto:jylzs369@163.com"><i class="blogfont">&#xe61a; </i></a>
+  
+    <a class="social-links" href="/atom.xml"><i class="blogfont">&#xe640; </i></a>
+  
+  
+</footer>
+    <!-- scripts -->
+
+<script src="/scripts/main.js"></script>
+
+  </body>
+</html>
