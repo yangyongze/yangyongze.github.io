@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html  lang=zh>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+    
+    <link rel="shortcut icon" href="/images/favicon.ico ">
+    
+    
+    <link rel="icon" type="image/png" href="/images/favicon-android.png " sizes="192x192">
+    
+    
+    <link rel="apple-touch-icon" href="/images/favicon-apple.png " sizes="180x180">
+    
+  
+  <!-- title -->
+  <title>YYZe&#39;blog Hexo搭建自己的博客 </title>
+  <!-- styles -->
+  <!-- styles -->
+
+<link rel="stylesheet" href="/styles/global.css">
+
+  <!-- rss -->
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+  <body>
+    <header id="header">
+  
+  <nav class="menu menu--right">
+  
+    <a class="menu__item" href="/">主页</a>
+    <a class="menu__item" href="/archives/">归档</a>
+    <a class="menu__item" href="/categories/">专题</a>
+    <a class="menu__item" href="/tags/">标签</a>
+    <!-- <a class="menu__item" href="/">作品</a> -->
+    <!-- <a class="menu__item" href="/about/">关于</a> -->
+  </nav>
+</header>
+    <main>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post__header">
+  <h1 class="post__title">Hexo搭建自己的博客</h1>
+  
+  
+  <div class="post__meta">
+    
+<time class="post__date" datetime="2020-07-27T02:38:43.536Z" itemprop="datePublished">
+  
+  <i class="blogfont">&#xedff;</i>
+  
+  2020-07-27 10:38:43
+</time>
+
+    
+
+    
+
+    <div id="/2020/07/27/Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="leancloud_visitors post__stat" data-flag-title="Hexo搭建自己的博客">
+  <i class="blogfont">&#xe672;</i>
+  <span class="leancloud-visitors-count">loading...</span>
+</div>
+  </div>
+</header>
+  <aside class="post__aside">
+  <div class="post__actions">
+    <a id="backTop" class="post__top" href="javascript:">
+      <i class="blogfont">&#xe6b1;</i><!-- Top -->
+    </a>
+    <a id="share" class="post__share" href="javascript:">
+      <i class="blogfont">&#xe6c1;</i>
+    </a>
+  </div>
+  
+</aside>
+  <div class="post__content" itemprop="articleBody">
+    <ul>
+<li><p>目标：想要在浏览器在hexo server在正常启动后显示出预览界面。问题：启动hexo server 提示信息显示 hexo is running, 不能显示页面。问题排查1,使用端口被占用，改变端口4000 –&gt; 5000 –&gt; 8000 –&gt; 4001 –&gt; 5555等等都未能成功。问题排查2：wget 本地网址 提示没有到主机的路由。于是尝试关闭防火墙。没用。 </p>
+</li>
+<li><p>问题排查思路</p>
+</li>
+</ul>
+<p>描述：<br>hexo is running on <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 但是浏览器提示 无法连接。</p>
+<p>那么，<br>1、在这是一个怎样的过程？2、这个过程的那个环节出了问题？</p>
+<p>试答：<br>这是一个网络通信过程，浏览器像服务器发送request</p>
+<p><img src="https://appwk.baidu.com/naapi/doc/view?ih=810&o=jpg_6&iw=1080&ix=0&iy=0&aimw=1080&rn=1&doc_id=da39eb46336c1eb91a375d4b&pn=6&sign=20916efe171567cbcd19fdb2d7f4d5ed&type=1&app_ver=2.9.8.2&ua=bd_800_800_IncredibleS_2.9.8.2_2.3.7&bid=1&app_ua=IncredibleS&uid=&cuid=&fr=3&Bdi_bear=WIFI&from=3_10000&bduss=&pid=1&screen=800_800&sys_ver=2.3.7" alt=""></p>
+<p>内网 公网 映射</p>
+
+  </div>
+  
+</article>
+    </main>
+    <footer id="footer">
+  Copyright &copy;
+  2020
+  yangyongze
+  
+  
+    <a class="social-links" href="https://github.com/jylzs369" target="_blank" rel="noopener"><i class="blogfont">&#xe6b7; </i></a>
+  
+    <a class="social-links" href="mailto:jylzs369@163.com"><i class="blogfont">&#xe61a; </i></a>
+  
+    <a class="social-links" href="/atom.xml"><i class="blogfont">&#xe640; </i></a>
+  
+  
+</footer>
+    <!-- scripts -->
+
+<script src="/scripts/main.js"></script>
+
+  </body>
+</html>
